@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans;
+}
+
+.angled {
+  -webkit-clip-path: polygon(0 100, 100% 108px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 108px, 100% 100%, 0 100%);
+}
+
+/* grouped repeating styles */
+.contained {
+  @apply flex flex-wrap lg:flex-col px-6 lg:px-12 2xl:container 2xl:mx-auto;
+}
+
+.categories {
+  @apply space-x-1;
+}
+
+.categories > a {
+  @apply bg-brand-alt hover:bg-brand-main rounded shadow text-base uppercase font-sans text-center text-black transition-colors duration-300 px-4 pt-3 pb-2 leading-none;
+}
+
+.tags>a {
+  @apply bg-brand-black hover:bg-black rounded shadow text-base uppercase font-sans text-center text-white transition-colors duration-300 px-4 pt-3 pb-2 leading-none;
+}
+
+.pagination {
+  @apply flex flex-row justify-center space-x-2 w-full text-2xl lg:text-3xl font-title mt-4 lg:mt-8;
+}
+
+.pagination .page-numbers {
+  @apply p-1 text-center text-brand-black hover:text-brand-third transition-colors duration-200;
+}
+
+.pagination .page-numbers.current {
+  @apply text-brand-third;
+}
+
+article a {
+  @apply text-brand-third hover:text-brand-third_dark transition-colors duration-200;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  @apply font-title font-bold;
+}
+
+article h1 { @apply text-4xl lg:text-6xl;}
+article h2 { @apply text-3xl lg:text-5xl;}
+article h3 { @apply text-2xl lg:text-4xl;}
+article h4 { @apply text-xl lg:text-3xl;}
+article h5 { @apply text-lg lg:text-2xl;}
+article h6 { @apply text-base lg:text-xl;}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  margin-left: .4em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+/* blog styles */
+.blog p {
+    @apply text-base lg:text-lg my-4 text-brand-black;
+}
+
+.sidebar {
+
+}
+
+.sidebar-widget {
+    
+}
+
+.sidebar-widget ul li {
+    @apply leading-8;
+}
+
+.sidebar-widget ul li a {
+    @apply border-b-[2px] border-brand-black hover:border-brand-third hover:text-brand-third transition-colors duration-200;
+}

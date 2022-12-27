@@ -1,0 +1,27 @@
+.theme-button {
+    @apply w-fit justify-center py-1 xl:py-2 px-2 xl:px-4 rounded-md no-underline shadow-2xl inline-flex text-white font-sans font-semibold text-xl xl:text-2xl transition-colors duration-300 cursor-pointer;
+}
+
+.theme-button.small {
+    @apply pt-1 xl:pt-2 xl:pb-[2px] px-4 xl:px-6 text-lg xl:text-xl;
+}
+
+.theme-button.main {
+    @apply bg-brand-third text-white hover:bg-brand-third shadow-custom shadow-brand-third;
+}
+
+.theme-button.alt {
+    @apply bg-brand-black text-white hover:bg-brand-black shadow-custom shadow-brand-black;
+}
+
+.theme-button.tertiary {
+    @apply bg-brand-dark_grey text-white hover:bg-brand-darkest_grey shadow-custom shadow-brand-darkest_grey;
+}
+
+.theme-button.dark_button {
+    @apply bg-[#151515] text-white hover:bg-brand-black shadow-custom shadow-brand-black;
+}
+
+.theme-button.header {
+    @apply text-3xl px-4 xl:px-6 lg:text-base xl:text-lg m-0 shadow-sm #{!important};
+}

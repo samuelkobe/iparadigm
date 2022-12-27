@@ -1,0 +1,31 @@
+#mc4wp-form-1 .form-wrapper {
+    @apply flex flex-col space-y-3;
+}
+
+footer #email_newsletter {
+    @apply mb-3 last:mb-0;
+    margin-top: 0 !important;
+}
+
+#mc4wp-form-1 .mc4wp-email,
+#mc4wp-form-1 .mc4wp-first_name,
+#mc4wp-form-1 .mc4wp-last_name {
+    @apply text-base xl:text-lg h-8 xl:h-12 p-2 text-brand-black rounded placeholder-brand-alt focus:outline-none outline-none focus:text-brand-black border-2 border-transparent focus:border-brand-alt transition-colors duration-200;
+}
+
+#mc4wp-form-1 .submit-wrapper {
+    @apply flex flex-col justify-start items-start xl:flex-row mt-4;
+}
+
+#mc4wp-form-1 .submit {
+    @apply w-32 xl:w-40 justify-center pt-2 pb-1 xl:pt-2 px-3 xl:pb-1 xl:px-4 rounded no-underline inline-flex text-white font-sans text-xl 2xl:text-2xl bg-brand-fourth hover:bg-brand-third transition-colors duration-200 uppercase cursor-pointer;
+ }
+
+#mc4wp-form-1 .mc4wp-response .mc4wp-alert,
+#mc4wp-form-1 .mc4wp-response .mc4wp-success {
+    @apply mt-4;
+}
+
+#mc4wp-form-1 .mc4wp-response .mc4wp-success {
+    @apply text-brand-alt;
+}

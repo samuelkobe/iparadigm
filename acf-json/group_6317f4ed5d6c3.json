@@ -1,0 +1,338 @@
+{
+    "key": "group_6317f4ed5d6c3",
+    "title": "Testimonials",
+    "fields": [
+        {
+            "key": "field_631aec3d9594c",
+            "label": "ID",
+            "name": "id",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_631aec3d9594d",
+                    "label": "Block ID?",
+                    "name": "block_id_toggle",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Toggle this on if you want this block to be link to a menu item.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "On",
+                    "ui_off_text": "Off"
+                },
+                {
+                    "key": "field_631aec3d9594e",
+                    "label": "Block ID",
+                    "name": "block_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This ID must be unique across the whole site. This ID must match your \"Navigation Label\" for your menu anchors exactly. To set your menu object's Navigation Label go to: <b>Appearance > Menu<\/b> in your WordPress admin sidebar.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631aec3d9594d",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 24
+                },
+                {
+                    "key": "field_631aec3d9594f",
+                    "label": "Block ID not in use",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_631aec3d9594d",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Toggle the Block ID on to use this.",
+                    "new_lines": "",
+                    "esc_html": 0
+                }
+            ]
+        },
+        {
+            "key": "field_6317f4ed5f8cb",
+            "label": "Testimonials group title",
+            "name": "testimonials_group_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add a short title for the group of testimonials in this block (Max 128 characters).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 128
+        },
+        {
+            "key": "field_6317f4ed5f8d0",
+            "label": "Testimonials",
+            "name": "testimonials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add up to 15 Testimonials per block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6317f4ed61bc5",
+            "min": 0,
+            "max": 15,
+            "layout": "block",
+            "button_label": "Add",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6317facfeb28a",
+                    "label": "Image?",
+                    "name": "image_toggle",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Add image for testimonial?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No",
+                    "parent_repeater": "field_6317f4ed5f8d0"
+                },
+                {
+                    "key": "field_6317faf7eb28b",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload a headshot style image (Min 64px - 64px \/ Max 256px - 256px).",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6317facfeb28a",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 64,
+                    "min_height": 64,
+                    "min_size": "",
+                    "max_width": 256,
+                    "max_height": 256,
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_6317f4ed5f8d0"
+                },
+                {
+                    "key": "field_6317fb56eb28c",
+                    "label": "No Image",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6317facfeb28a",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "No image for this testimonial. A placeholder will be added automatically.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0,
+                    "parent_repeater": "field_6317f4ed5f8d0"
+                },
+                {
+                    "key": "field_6317f4ed61bc5",
+                    "label": "Author",
+                    "name": "author",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Add testimonial's author name (Max 32 Characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 32,
+                    "parent_repeater": "field_6317f4ed5f8d0"
+                },
+                {
+                    "key": "field_6317f4ed61bca",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Add author title (Max 64 Characters). i.e. 'CEO - Example Company Inc.'",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 64,
+                    "parent_repeater": "field_6317f4ed5f8d0"
+                },
+                {
+                    "key": "field_6317f59ca31cb",
+                    "label": "Quote",
+                    "name": "quote",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Add what they have said (Max 256 characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": 256,
+                    "rows": 4,
+                    "new_lines": "",
+                    "parent_repeater": "field_6317f4ed5f8d0"
+                }
+            ]
+        },
+        {
+            "key": "field_6317f4ed5f8d4",
+            "label": "Bottom Spacing",
+            "name": "bottom_spacing",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Choose how much space should be under the header (Default is 0);",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "[0px]": "none (0px)",
+                "[16px]": "xs (16px)",
+                "[32px]": "sm (32px)",
+                "[48px]": "md (48px)",
+                "[64px]": "lg (64px)",
+                "[80px]": "xl (80px)",
+                "[96px]": "2xl (96px)",
+                "[112px]": "3xl (112px)",
+                "[128px]": "4xl (128px)",
+                "[156px]": "5xl (156px)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/testimonials"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1671557119
+}

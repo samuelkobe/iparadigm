@@ -1,0 +1,3 @@
+#app>footer>div.contained>div>div.w-1\/2.md\:w-1\/4.lg\:w-1\/6.grow.order-3.lg\:order-2.mb-8.lg\:mb-0>div>ul>li>a {
+    @apply hover:text-brand-third transition-colors duration-300;
+}

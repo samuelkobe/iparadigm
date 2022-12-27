@@ -1,0 +1,31 @@
+nav ul li {
+    @apply relative;
+}
+
+nav ul li a.menu-anchor {
+    @apply flex mx-3 lg:mx-1 xl:mx-3 mb-1 mt-2 justify-center lg:text-left lg:border-b-2 lg:border-transparent transition-colors duration-200;
+}
+
+nav ul li a.menu-anchor:hover {
+    @apply lg:border-b-2 lg:border-white;
+}
+
+nav ul li.active a.menu-anchor {
+    @apply text-brand-fourth lg:text-white lg:border-b-2 lg:border-white;
+}
+
+nav ul li:hover ul.sub-menu {
+    @apply lg:visible;
+}
+
+nav ul li ul.sub-menu {
+    @apply lg:mb-0 text-right lg:invisible lg:absolute right-0 lg:whitespace-nowrap lg:pt-2 lg:pb-2;
+}
+
+nav ul li ul.sub-menu li {
+    @apply text-xl lg:flex lg:justify-center lg:bg-brand-black lg:first:pt-1 lg:leading-none lg:first:rounded-t lg:last:rounded-b last:lg:pr-0;
+}
+
+nav ul li ul.sub-menu li a.menu-anchor {
+    @apply flex px-2 lg:py-0 whitespace-nowrap m-0 lg:text-lg border-none;
+}

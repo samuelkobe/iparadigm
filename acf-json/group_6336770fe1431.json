@@ -1,0 +1,90 @@
+{
+    "key": "group_6336770fe1431",
+    "title": "Article Settings",
+    "fields": [
+        {
+            "key": "field_636963e8d9eb6",
+            "label": "Article Type",
+            "name": "article_type",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Is this article external or internal?",
+            "default_value": 1,
+            "ui_on_text": "External",
+            "ui_off_text": "Internal",
+            "ui": 1
+        },
+        {
+            "key": "field_6369644b4ab3c",
+            "label": "External Article URL",
+            "name": "external_article_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Add a URL so users can navigate to the external article and read it.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_636963e8d9eb6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_633677104445c",
+            "label": "Article Preview text",
+            "name": "article_preview_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Add the articles preview text. Users appreciate this as it gives them context for what they are about to read (Max 256 characters).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 256,
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 12,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1669339518
+}

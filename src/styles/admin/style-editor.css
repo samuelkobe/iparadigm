@@ -1,0 +1,79 @@
+.wp-block {
+    max-width: 90%;
+}
+
+/* .editor-styles-wrapper {
+    background-color: black;
+    color: #fff;
+} */
+
+.editor-styles-wrapper a {
+    color: #006aff;
+    text-decoration: underline;
+}
+
+
+.video-admin, .video-admin span, .video-admin span span, .video-admin span span iframe {
+    display: none !important;
+}
+
+/* .wp-block-post-title {
+    color: white !important;
+} */
+
+.sub_price.annual, .sub_button_annual {
+    display: none !important;
+}
+
+.wp-block h1,
+.wp-block h2,
+.wp-block h3,
+.wp-block h4,
+.wp-block h5,
+.wp-block h6 {
+    font-weight: 400; /* Added to help fonts in editor that dont have weight 700 that wordpress automatically applies in the editor */
+}
+
+img.theme-override {
+     height: 100% !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p {
+    margin-bottom: 0 !important;
+    line-height: 1.5 !important;
+}
+h2.theme-override {
+    margin-bottom: 0 !important;
+}
+
+h3.theme-override, h4.theme-override {
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+
+ .testimonials-wrapper-div {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+ .testimonials-wrapper-div:after {
+    z-index: 9999;
+    content: "Testimonial preview unavailable. The JS library is not loaded here to save resources. This is normal, please check the front-end of the website to see testimonials. You may still add, remove, and edit testmonials by clicking on this block." !important;
+    display: inline-block !important;
+    color: #000000 !important;
+    background-color: #e4be40 !important;
+    border-radius: 12px !important;
+    border: 1 solid transparent !important;
+    margin: 24px !important;
+    padding: 24px !important;
+ }
+
+  .testimonials-wrapper-div div {
+    display: none !important;
+    position: relative !important;
+ }

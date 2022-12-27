@@ -1,0 +1,7 @@
+.video-embed {
+    @apply absolute inset-0 w-full h-full flex justify-center items-center;
+}
+
+.video-embed iframe {
+    @apply aspect-video w-[85%] lg:w-2/3 xl:w-1/2 h-auto absolute;
+}

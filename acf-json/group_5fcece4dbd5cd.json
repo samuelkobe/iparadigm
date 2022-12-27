@@ -1,0 +1,462 @@
+{
+    "key": "group_5fcece4dbd5cd",
+    "title": "Settings",
+    "fields": [
+        {
+            "key": "field_61a019c615c8f",
+            "label": "Website Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_627192112fd88",
+            "label": "Header Button?",
+            "name": "header_button_toggle",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Turn header menu button on or off.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "On",
+            "ui_off_text": "Off",
+            "ui": 1
+        },
+        {
+            "key": "field_6271922c2fd89",
+            "label": "Header Button",
+            "name": "header_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Select the destination and text for the button.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_627192112fd88",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6266e74c94e07",
+            "label": "Brand Image",
+            "name": "brand_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Add an image to the navigation bar and footer (It is recommended that this image be a .svg or .webp file with transparent background).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 8,
+            "mime_types": "",
+            "preview_size": "small"
+        },
+        {
+            "key": "field_63694525346f4",
+            "label": "Footer Image",
+            "name": "footer_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Add an image to the navigation bar and footer (It is recommended that this image be a .svg or .webp file with transparent background).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 8,
+            "mime_types": "",
+            "preview_size": "small"
+        },
+        {
+            "key": "field_631280f20205c",
+            "label": "Footer Content",
+            "name": "footer_content",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_63128018b6b98",
+                    "label": "Footer Text",
+                    "name": "footer_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Add the text that should follow the copyright and year: \"© YYYY ...\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_631280a10205b",
+                    "label": "Footer Link",
+                    "name": "footer_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Add a link to a privacy policy, terms & conditions, or other legal document page here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_61a0450ef4110",
+            "label": "Open Graph",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_625735e9ee731",
+            "label": "Open Graph Message",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Your Open Graph information consists of text and often an image. This information is what Google, Facebook and other Search Engines and Social Media entities use to show more details about your website's domain\/url.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5da75e896ab1c",
+            "label": "Open Graph Title",
+            "name": "open_graph_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add a title for Open Graph (sharing details).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5da75ed86ab1d",
+            "label": "Open Graph URL",
+            "name": "open_graph_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Add the expected final URL for the website's homepage for Open Graph (sharing details).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5da75f0d6ab1e",
+            "label": "Open Graph Image",
+            "name": "open_graph_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Add an image for Open Graph. Make sure to add this at the production level image's URL is the same as your website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61043e9808606",
+            "label": "Social Media",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_625737de82b61",
+            "label": "Social Media Toggle",
+            "name": "social_media_toggle",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle your Social Media on or off. This is will appear in the footer if it is on.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_6266cc47d172f",
+            "label": "Social Media",
+            "name": "social_media",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_625737de82b61",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6266cca7efb93": {
+                    "key": "layout_6266cca7efb93",
+                    "name": "social_media",
+                    "label": "Social Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6266cd49d9da7",
+                            "label": "Info",
+                            "name": "info",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6282c76a120a9",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_6282c775120aa",
+                                    "label": "Url",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_6282c787120ab",
+                            "label": "Icon SVG Embed",
+                            "name": "icon",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "text",
+                            "media_upload": 0,
+                            "toolbar": "full",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6266d0010d39b",
+                            "label": "Icon fill",
+                            "name": "icon_fill",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "Choose the fill colour for the SVG icon.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "White",
+                                "black": "Black"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Social Media",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 40,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1667843407
+}

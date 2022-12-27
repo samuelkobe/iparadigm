@@ -1,0 +1,26 @@
+.legal-template {
+    @apply text-white #{!important};
+}
+
+.legal-template h1 { @apply text-6xl; }
+.legal-template h2 { @apply text-5xl; }
+.legal-template h3 { @apply text-3xl; }
+.legal-template h4 { @apply text-2xl; }
+.legal-template p, .legal-template ul { @apply text-xl font-sans mt-8 mb-4; }
+
+.legal-template h1, .legal-template h2, .legal-template h3, .legal-template h4 {
+    @apply font-title mt-12 mb-4;
+}
+
+.legal-template ul {
+    @apply list-disc;
+}
+
+.legal-template ul li {
+    @apply ml-6 lg:ml-10;
+}
+
+
+.legal-template a {
+    @apply text-brand-third underline #{!important};
+}
