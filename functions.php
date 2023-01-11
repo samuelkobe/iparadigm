@@ -47,6 +47,7 @@ function webokstarter_custom_class_replace( $html ) {
 add_filter('get_custom_logo', 'webokstarter_custom_class_replace', 10);
 
 function cc_mime_types($mimes) {
+ $mimes['json'] = 'application/json';
  $mimes['svg'] = 'image/svg+xml';
  return $mimes;
 }
@@ -289,8 +290,11 @@ function footer_scripts()
 	wp_register_script('scroll-nav', get_template_directory_uri() . '/js/scroll.js', array(), '1.0.0'); // Custom scripts
 	wp_enqueue_script('scroll-nav'); // Enqueue
 
-    wp_register_script('faqs', get_template_directory_uri() . '/js/faqs.js', array(), '1.0.0'); // Custom scripts
-    wp_enqueue_script('faqs'); // Enqueue
+	wp_register_script('scroll-reveal', get_template_directory_uri() . '/js/scroll-reveal.js', array(), '1.0.0'); // Custom scripts
+	wp_enqueue_script('scroll-reveal'); // Enqueue
+
+    wp_register_script('steps', get_template_directory_uri() . '/js/steps.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('steps'); // Enqueue
 }
 
 /* ####### Load styles ####### */

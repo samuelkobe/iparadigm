@@ -47,12 +47,12 @@ if ( have_rows( 'id' ) ) : ?>
 
 <section id="<?php echo $block_id ?>" class="min-h-[320px] lg:min-h-[640px] lg:h-[50vh] flex flex-row items-center justify-start bg-transparent relative mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
-    <div class="w-full h-full bg-gradient-to-b lg:bg-gradient-to-tr from-brand-third to-[#1C5D86] angled pt-20 lg:pt-12 pb-12">
+    <div class="w-full h-full bg-gradient-to-b lg:bg-gradient-to-tr from-brand-third to-[#1C5D86] angled pt-20 lg:pt-12 pb-12 object-reveal-125">
 
         <div class="container px-6 lg:px-4 mx-auto h-full flex flex-col lg:flex-row lg:items-center">
 
             <div class="w-full h-full flex flex-col justify-center">
-                <div class="flex flex-col lg:flex-row w-2/3 xl:w-1/2">
+                <div class="flex flex-col lg:flex-row w-2/3 xl:w-1/2 object-reveal-250">
                     <?php $icon = get_field( 'icon' ); ?>
                     <?php if ( $icon ) : ?>
                         <img class="w-24 lg:w-40 aspect-square mb-4 lg:mb-0 lg:mr-8" src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" />
@@ -61,7 +61,7 @@ if ( have_rows( 'id' ) ) : ?>
                     <h2 class="text-white mb-3 font-title font-normal text-3xl lg:text-5xl 2xl:text-6xl lg:mt-8 2xl:mt-4"><?php the_field( 'header' ); ?></h2>
                 </div>
 
-                <div class="flex flex-col mt-5 lg:mt-10 lg:flex-row">
+                <div class="flex flex-col mt-5 lg:mt-10 lg:flex-row object-reveal-250">
                     <div class="w-full lg:w-3/4">
                         <p class="text-base lg:text-2xl font-sans"><?php the_field( 'content' ); ?></p>
                     </div>

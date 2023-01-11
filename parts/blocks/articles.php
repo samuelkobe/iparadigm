@@ -48,7 +48,7 @@ if ( have_rows( 'id' ) ) : ?>
 <section id="<?php echo $block_id ?>" class="w-full mb-<?php echo get_field( 'bottom_spacing' ); ?>">
     <div class="bg-white relative flex flex-col items-center pt-16 pb-8 2xl:py-24">
 
-        <div class="container min-h-[480px] h-auto md:h-[40vh] lg:min-h-[640px] lg:h-[55vh] flex flex-col md:flex-row md:items-center">
+        <div class="container min-h-[480px] h-auto md:h-[40vh] lg:min-h-[640px] lg:h-[55vh] flex flex-col md:flex-row md:items-center object-reveal-250">
             <div class="container mx-auto px-6 lg:px-4 flex flex-col xl:flex-row w-full lg:w-1/2 xl:items-center">
                 <div class="mb-2 xl:mb-0 xl:mr-4">
                     <?php $icon = get_field( 'icon' ); ?>

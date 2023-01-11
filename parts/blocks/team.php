@@ -58,7 +58,7 @@ if ( have_rows( 'id' ) ) : ?>
 	<?php if ( have_rows( 'team' ) ) : ?>
 		<?php while ( have_rows( 'team' ) ) : the_row(); ?>
 
-        <div class="md:container mx-auto pt-0 pb-12 lg:px-1/12">
+        <div class="md:container mx-auto pt-0 pb-12 lg:px-1/12 object-reveal-250">
             <div class="flex flex-col md:flex-row items-center md:rounded-xl md:shadow-lg relative pb-6 md:pb-0">
                 <div class="max-w-full w-full min-h-full lg:w-1/2">
                     <?php $image = get_sub_field( 'image' ); ?>
@@ -85,7 +85,7 @@ if ( have_rows( 'id' ) ) : ?>
 		<?php // No rows found ?>
 	<?php endif; ?>
 
-    <div class="md:container px-6 mx-auto py-2 lg:py-16 lg:pt-32">
+    <div class="md:container px-6 mx-auto py-2 lg:py-16 lg:pt-32 object-reveal-250">
         <div class="w-full lg:px-1/12 xl:px-1/6 flex flex-col md:items-center md:justify-center md:text-center">
 
             <h2 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl text-brand-black mb-2"><?php the_field( 'call_to_action_title' ); ?></h2>

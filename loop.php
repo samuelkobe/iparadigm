@@ -15,7 +15,7 @@
 
 				if( $i == 1 && $paged == 1) { ?>
 
-					<div class="flex flex-col lg:flex-row lg:flex-wrap w-full lg:items-center col-span-1 md:col-span-2 xl:col-span-3">
+					<div class="flex flex-col lg:flex-row lg:flex-wrap w-full lg:items-center col-span-1 md:col-span-2 xl:col-span-3 object-reveal-250">
 						<div class="flex flex-col lg:flex-row lg:items-center h-full w-full relative overflow-hidden rounded-lg bg-white shadow-xl">
 
 							<div class="flex relative w-full lg:w-1/3 h-40 md:h-48 lg:h-full">
@@ -50,7 +50,7 @@
 
 				<?php } else { ?>
 
-					<div class="flex flex-col h-auto w-full relative overflow-hidden rounded-lg bg-white shadow-xl">
+					<div class="flex flex-col h-auto w-full relative overflow-hidden rounded-lg bg-white shadow-xl object-reveal-250">
 
 						<div class="relative w-full h-40">
 							<?php if ( has_post_thumbnail()) : ?>

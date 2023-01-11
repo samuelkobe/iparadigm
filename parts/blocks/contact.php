@@ -48,10 +48,10 @@ if ( have_rows( 'id' ) ) : ?>
 
 <section id="<?php echo $block_id ?>" class="w-full bg-brand-dark_grey md:mt-16 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
-    <div class="container mx-auto py-16 lg:py-32">
+    <div class="container mx-auto py-16 lg:py-32 px-0 xl:px-1/24 2xl:px-1/12">
         <div class="w-full flex flex-col lg:flex-row">
 
-            <div class="w-full lg:w-1/3 flex flex-col items-center justify-center mb-16 lg:mb-0">
+            <div class="w-full lg:w-1/3 flex flex-col items-center justify-center mb-16 lg:mb-0 object-reveal-500">
                 <div class="w-1/4 lg:w-1/2 mb-4">
                     <?php $contact_icon = get_field( 'contact_icon' ); ?>
                     <?php if ( $contact_icon ) : ?>
@@ -66,7 +66,7 @@ if ( have_rows( 'id' ) ) : ?>
             <div class="w-full lg:w-2/3 flex flex-col">
                 
                 <div class="w-full flex items-center">
-                    <div class="w-full xl:w-1/2 flex flex-col items-center justify-center lg:justify-start lg:flex-row">
+                    <div class="w-full xl:w-1/2 flex flex-col items-center justify-center lg:justify-start lg:flex-row object-reveal-250">
                         
                         <div class="w-16 lg:w-24 mb-2 lg:mb-0">
                             <?php $form_icon = get_field( 'form_icon' ); ?>
@@ -79,7 +79,7 @@ if ( have_rows( 'id' ) ) : ?>
                     </div>
                 </div>
 
-                <div class="w-full px-6">
+                <div class="w-full px-6 object-reveal-375">
                     <?php the_field( 'contact_form_embed' ); ?>
                 </div>
             </div>

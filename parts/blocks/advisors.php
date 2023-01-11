@@ -52,7 +52,7 @@ if ( have_rows( 'id' ) ) : ?>
 	<?php if ( have_rows( 'advisors' ) ) : ?>
 		<?php while ( have_rows( 'advisors' ) ) : the_row(); ?>
 
-        <div class="container mx-auto pt-0 pb-12 lg:px-1/12">
+        <div class="container mx-auto pt-0 pb-12 lg:px-1/12 object-reveal-250">
             <div class="flex flex-col sm:flex-row items-center sm:rounded-xl sm:shadow-lg relative pb-6 sm:pb-0">
                 <div class="max-w-full w-full min-h-full lg:w-1/4">
                     <?php $image = get_sub_field( 'image' ); ?>

@@ -49,7 +49,7 @@ if ( have_rows( 'id' ) ) : ?>
 
     <div class="container h-full mx-auto flex flex-col lg:flex-row lg:gap-x-4 lg:justify-between px-6 lg:px-0 py-8 lg:py-16 lg:pb-56">
 
-        <div class="w-full flex flex-col justify-center mt-4 lg:mt-0 pt-12 lg:pt-36">
+        <div class="w-full flex flex-col justify-center mt-4 lg:mt-0 pt-12 lg:pt-36 object-reveal-125">
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
