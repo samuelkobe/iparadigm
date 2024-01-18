@@ -89,5 +89,5 @@
 		</div>
 
 	<?php else: ?>
-		<h2 class="leading-normal text-base lg:text-xl w-full md:w-5/6 lg:w-3/4 xl:w-2/3">Oops, either you searched for something that doesn't exist or left the search field empty. Try searching again or go back to <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="border-b-2 border-brand-third hover:text-brand-third transition-colors duration-200" title="All Posts">All Posts</a> or navigate to the <a class="border-b-2 border-brand-third hover:text-brand-third transition-colors duration-200" rel="Back home" title="Home" href="<?php echo esc_url( home_url() ); ?>">Home</a> page.</h2>
+		<h2 class="leading-normal text-base lg:text-xl w-full md:w-5/6 lg:w-3/4 xl:w-2/3">Oops, either you searched for something that doesn't exist or there are no posts currently. Try searching again or go back to <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="border-b-2 border-brand-third hover:text-brand-third transition-colors duration-200" title="All Posts">All Posts</a> or navigate to the <a class="border-b-2 border-brand-third hover:text-brand-third transition-colors duration-200" rel="Back home" title="Home" href="<?php echo esc_url( home_url() ); ?>">Home</a> page.</h2>
 	<?php endif; wp_reset_query(); ?>

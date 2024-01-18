@@ -16,6 +16,22 @@ body {
   @apply flex flex-wrap lg:flex-col px-6 lg:px-12 2xl:container 2xl:mx-auto;
 }
 
+section p a {
+  @apply underline;
+}
+
+section span a {
+  @apply underline;
+}
+
+section span ul {
+  @apply my-4 xl:my-10 pl-6 xl:pl-12;
+}
+
+section span li {
+  @apply list-disc;
+}
+
 .categories {
   @apply space-x-1;
 }
@@ -24,7 +40,7 @@ body {
   @apply bg-brand-alt hover:bg-brand-main rounded shadow text-base uppercase font-sans text-center text-black transition-colors duration-300 px-4 pt-3 pb-2 leading-none;
 }
 
-.tags>a {
+.tags > a {
   @apply bg-brand-black hover:bg-black rounded shadow text-base uppercase font-sans text-center text-white transition-colors duration-300 px-4 pt-3 pb-2 leading-none;
 }
 
@@ -44,22 +60,75 @@ article a {
   @apply text-brand-third hover:text-brand-third_dark transition-colors duration-200;
 }
 
-article h1, article h2, article h3, article h4, article h5, article h6 {
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
   @apply font-title font-bold;
 }
 
-article h1 { @apply text-4xl lg:text-6xl;}
-article h2 { @apply text-3xl lg:text-5xl;}
-article h3 { @apply text-2xl lg:text-4xl;}
-article h4 { @apply text-xl lg:text-3xl;}
-article h5 { @apply text-lg lg:text-2xl;}
-article h6 { @apply text-base lg:text-xl;}
+article h1 {
+  @apply text-4xl lg:text-6xl;
+}
+article h2 {
+  @apply text-3xl lg:text-5xl;
+}
+article h3 {
+  @apply text-2xl lg:text-4xl;
+}
+article h4 {
+  @apply text-xl lg:text-3xl;
+}
+article h5 {
+  @apply text-lg lg:text-2xl;
+}
+article h6 {
+  @apply text-base lg:text-xl;
+}
 
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   height: 24px;
   width: 24px;
-  margin-left: .4em;
+  margin-left: 0.4em;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
   cursor: pointer;
+}
+
+.text-shadow {
+  @media only screen and (max-width: 1024px) {
+    text-shadow: 2px 2px 5px #00000050;
+  }
+}
+
+div.legal-template > section > div > div > div > div > h1 {
+  @apply text-3xl lg:text-5xl;
+}
+
+.legal-template h1,
+.legal-template h4 {
+  @apply font-bold font-title;
+}
+
+.legal-template span,
+.legal-template p {
+  @apply text-sm lg:text-base font-normal;
+}
+
+div > div.blog > ol {
+  list-style: decimal;
+  padding-left: 24px;
+  @apply pb-4;
+}
+
+div > div.blog > ul {
+  list-style: disc;
+  padding-left: 24px;
+  @apply pb-4;
+}
+
+div > div.blog > ol > li {
+  @apply pb-1;
 }

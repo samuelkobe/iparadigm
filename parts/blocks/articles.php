@@ -80,7 +80,7 @@ if ( have_rows( 'id' ) ) : ?>
                 
                 $the_query = new WP_Query( $args ); ?>
                 
-                <div class="swiper w-full h-[400px] xl:h-[600px] articlesSwiper flex items-center">
+                <div class="swiper w-full h-[400px] xl:h-[600px] articlesSwiper swiper-wrapper-div flex items-center">
 
                     <div class="relative w-1/8 h-full flex flex-col items-center justify-center">
                         <div class="swiper-button-prev"></div>

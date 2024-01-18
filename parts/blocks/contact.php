@@ -46,7 +46,7 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="w-full bg-brand-dark_grey md:mt-16 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="w-full bg-brand-dark_grey md:pt-16 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
     <div class="container mx-auto py-16 lg:py-32 px-0 xl:px-1/24 2xl:px-1/12">
         <div class="w-full flex flex-col lg:flex-row">
@@ -66,16 +66,8 @@ if ( have_rows( 'id' ) ) : ?>
             <div class="w-full lg:w-2/3 flex flex-col">
                 
                 <div class="w-full flex items-center">
-                    <div class="w-full xl:w-1/2 flex flex-col items-center justify-center lg:justify-start lg:flex-row object-reveal-250">
-                        
-                        <div class="w-16 lg:w-24 mb-2 lg:mb-0">
-                            <?php $form_icon = get_field( 'form_icon' ); ?>
-                            <?php if ( $form_icon ) : ?>
-                                <img class="max-w-full" src="<?php echo esc_url( $form_icon['url'] ); ?>" alt="<?php echo esc_attr( $form_icon['alt'] ); ?>" />
-                            <?php endif; ?>
-                        </div>
-                        
-                        <h3 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl text-brand-black mb-2 lg:pl-8"><?php the_field( 'form_content' ); ?></h3>
+                    <div class="w-full flex flex-col items-center justify-center lg:justify-start lg:flex-row object-reveal-250">                        
+                        <h3 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl px-6 lg:px-0 text-brand-black mb-2 lg:pl-6"><?php the_field( 'form_content' ); ?></h3>
                     </div>
                 </div>
 

@@ -1,8 +1,8 @@
 <?php $brand_image = get_field( 'brand_image', 'option' ); ?>
 <?php if ($brand_image != null) : ?>
-    <a href="/">
+    <a class="h-full flex py-4 relative" href="/">
         <?php if ( $brand_image ) : ?>
-            <img class="w-[72px] h-auto relative aspect-square ml-6" src="<?php echo esc_url( $brand_image['url'] ); ?>" alt="<?php echo esc_attr( $brand_image['alt'] ); ?>" />
+            <img class="w-auto h-full relative ml-6 object-contain" src="<?php echo esc_url( $brand_image['url'] ); ?>" alt="<?php echo esc_attr( $brand_image['alt'] ); ?>" />
         <?php endif; ?>
     </a>
 <?php else : ?>

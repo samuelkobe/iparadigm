@@ -7,8 +7,8 @@
 				<div class="flex flex-row items-center justify-center h-auto">
 					<div class="w-full xl:px-1/12">
 						<div class="flex flex-col mb-6 lg:mb-16 object-reveal-125">
-							<h1 class="text-4xl lg:text-6xl font-title font-bold text-brand-black">Cybersecurity Articles</h1>
-							<p class="text-lg lg:text-xl mt-2 lg:mt-4">Stay up-to-date with recent changes to the cybersecurity landscape.</p>
+							<h1 class="text-4xl lg:text-6xl font-title font-bold text-brand-black">Articles</h1>
+							<p class="text-lg lg:text-xl mt-2 lg:mt-4">Stay up-to-date with recent changes to the digital transformation and cybersecurity landscapes.</p>
 						</div>
 						<div class="mt-6 lg:mt-12">
 							<?php get_template_part('loop'); ?>

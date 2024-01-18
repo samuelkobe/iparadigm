@@ -95,31 +95,6 @@
             ]
         },
         {
-            "key": "field_63696fc23d4f1",
-            "label": "Icon",
-            "name": "icon",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "small"
-        },
-        {
             "key": "field_63696d4c3b9af",
             "label": "Header",
             "name": "header",
@@ -129,7 +104,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "75",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -144,8 +119,8 @@
             "label": "Content",
             "name": "content",
             "aria-label": "",
-            "type": "textarea",
-            "instructions": "Add section content for this Call to Action block (Max 1000 characters).",
+            "type": "wysiwyg",
+            "instructions": "Add section content for this Call to Action block.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -154,10 +129,10 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": 1000,
-            "rows": 4,
-            "placeholder": "",
-            "new_lines": "br"
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_6282a3a3ff2b3",
@@ -207,6 +182,39 @@
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_64ad9118a3661",
+            "label": "Bottom Spacing (copy)",
+            "name": "bottom_spacing_copy",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Choose how much space should be under the header (Default is 0);",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "[0px]": "none (0px)",
+                "[16px]": "xs (16px)",
+                "[32px]": "sm (32px)",
+                "[48px]": "md (48px)",
+                "[64px]": "lg (64px)",
+                "[80px]": "xl (80px)",
+                "[96px]": "2xl (96px)",
+                "[112px]": "3xl (112px)",
+                "[128px]": "4xl (128px)",
+                "[156px]": "5xl (156px)"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -227,5 +235,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667854574
+    "modified": 1689096475
 }

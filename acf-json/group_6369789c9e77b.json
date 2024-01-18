@@ -107,7 +107,7 @@
             "name": "steps",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Add up to 12 FAQs per block",
+            "instructions": "Add up to 12 steps per block",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -531,5 +531,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672764224
+    "modified": 1687980254
 }

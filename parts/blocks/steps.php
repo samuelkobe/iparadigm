@@ -64,10 +64,12 @@ if ( have_rows( 'id' ) ) : ?>
             if ( have_rows( 'steps' ) ) : ?>
             <div class="flex flex-col space-y-4 lg:space-y-6 w-full md:w-5/6 md:mx-1/12 2xl:w-2/3 2xl:mx-1/12 object-reveal-250">
                 <?php while ( have_rows( 'steps' ) ) : the_row(); ?>             
-                    <div class="border-t-2 border-brand-dark_grey step-item flex flex-col justify-center w-full relative p-4 pt-8 lg:pt-12 mt-8 lg:mt-12 rounded-md after:w-full after:absolute after:inset-0 after:bg-white after:opacity-[8%] after:rounded-md <?php if ($step_count == 0) : echo 'open'; else : endif; ?>">
-                        <div class="relative w-full h-20 step-header cursor-pointer z-10 <?php if ($step_count == 0) : echo 'open'; else : endif; ?>">
-                            <h3 class="font-mono text-xs lg:text-sm 2xl:text-base leading-6 lg:leading-8 flex items-center align-middle uppercase">
-                                <div class="inline-flex items-center justify-center relative text-center align-middle w-6 h-6 lg:w-8 lg:h-8 leading-6 lg:leading-8 rounded-full bg-brand-third text-xs lg:text-sm mr-2">
+                    <div class="border-t-2 border-brand-dark_grey step-item flex flex-col justify-center w-full relative p-4 pt-8 lg:pt-12 mt-8 lg:mt-12 rounded-md after:w-full after:absolute after:inset-0 after:bg-white after:opacity-[8%] after:rounded-md open">
+                    <!-- <div class="border-t-2 border-brand-dark_grey step-item flex flex-col justify-center w-full relative p-4 pt-8 lg:pt-12 mt-8 lg:mt-12 rounded-md after:w-full after:absolute after:inset-0 after:bg-white after:opacity-[8%] after:rounded-md <//php if ($step_count == 0) : echo 'open'; else : endif; ?>"> -->
+                        <div class="relative w-full h-20 step-header cursor-pointer z-10 open">
+                        <!-- <div class="relative w-full h-20 step-header cursor-pointer z-10 <?//php if ($step_count == 0) : echo 'open'; else : endif; ?>"> -->
+                            <h3 class="font-title text-xs lg:text-sm 2xl:text-base leading-6 lg:leading-8 flex items-center align-middle uppercase text-brand-third">
+                                <div class="inline-flex items-center justify-center relative text-center align-middle w-6 h-6 lg:w-8 lg:h-8 leading-6 lg:leading-8 rounded-full bg-brand-third text-brand-black text-xs lg:text-sm mr-2">
                                     <?php echo $step_count + 1; ?>
                                     <span class="absolute inset-0 border-2 border-brand-black rounded-full z-0"></span>
                                 </div>
@@ -121,16 +123,16 @@ if ( have_rows( 'id' ) ) : ?>
                                 <div class="w-0 lg:w-1/12"></div>
 
                                 <div class="w-full lg:w-1/2">
-                                    <h4 class="w-full font-mono font-bold text-base lg:text-lg mb-6"><?php the_sub_field( 'header' ); ?></h4>
+                                    <h4 class="w-full font-title font-bold text-base lg:text-lg mb-6"><?php the_sub_field( 'header' ); ?></h4>
                                     <p class="w-full text-xs lg:text-sm"><?php the_sub_field( 'content' ); ?></p>
                                 </div>
                             </div>
 
                             <?php if ( get_sub_field( 'extra_media_toggle' ) == 1 ) : ?>
-                                <div class="w-full h-auto py-6 lg:p-6 relative">
+                                <div class="w-full h-auto py-6 lg:p-6 relative flex flex-col">
 
                                     <?php if (get_sub_field( 'extra_media_header') != null ) : ?>
-                                        <h4 class="w-full font-title font-medium text-[#212121] text-base lg:text-lg mt-6 lg:mt-12"><?php the_sub_field( 'extra_media_header' ); ?></h4>
+                                        <h4 class="self-end w-fit font-title font-light border-t-[#212121] border-t-[1px] text-[#212121] text-base lg:text-lg mt-6 lg:mt-12"><?php the_sub_field( 'extra_media_header' ); ?></h4>
                                     <?php endif; ?>
 
                                     <?php if ( get_sub_field( 'media_type_toggle' ) == 1 ) : ?>
@@ -141,9 +143,9 @@ if ( have_rows( 'id' ) ) : ?>
                                     <?php else : ?>
 
                                         <?php if (get_sub_field( 'extra_media_header') != null ) : ?>
-                                            <div class="w-full h-[fit-content] border-2 shadow-lg mt-2 lg:mt-4">
+                                            <div class="w-full h-fit border-2 shadow-lg mt-2 lg:mt-4">
                                         <?php else : ?>
-                                            <div class="w-full h-[fit-content] border-2 shadow-lg mt-6 lg:mt-12">
+                                            <div class="w-full h-fit border-2 shadow-lg mt-6 lg:mt-12">
                                         <?php endif; ?>
 
                                             <?php

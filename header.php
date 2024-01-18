@@ -15,9 +15,12 @@
 
 		<?php wp_head(); ?>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-		<!-- Swiper JS -->
-    	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" refer></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css"
+		/>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
 
 		<!-- <script src="https://unpkg.com/vue@3"></script> -->
 		<script src="https://unpkg.com/vue@3.2.33/dist/vue.global.prod.js"></script>

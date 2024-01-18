@@ -81,7 +81,7 @@ if ( have_rows( 'id' ) ) : ?>
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
-                    <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[72px] 2xl:text-8xl 2xl:leading-[108px] object-reveal-250"><?php the_sub_field( 'header' ); ?></h2>
+                    <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[72px] 2xl:text-7xl 2xl:leading-[96px] object-reveal-250"><?php the_sub_field( 'header' ); ?></h2>
                     <p class="text-white text-base lg:text-xl 2xl:text-2xl w-full lg:w-5/6 object-reveal-500"><?php the_sub_field( 'hero_content' ); ?></p>
 
                     <?php if ( get_sub_field( 'button_toggle' ) == 1 ) : ?>
