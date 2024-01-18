@@ -4,7 +4,7 @@
 
 				<div class="contained">
 
-					<div class="w-full flex flex-col md:flex-row md:justify-between md:flex-wrap py-2 md:py-4">
+					<div class="w-full flex flex-col md:flex-row md:justify-between md:flex-wrap py-2 md:pt-8 md:pb-4">
 
 						<?php // footer image part ?>
 						<?php get_template_part('parts/footer/image') ?>

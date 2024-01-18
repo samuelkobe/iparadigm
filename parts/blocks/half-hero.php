@@ -49,11 +49,15 @@ if ( have_rows( 'id' ) ) : ?>
 
     <div class="container h-full mx-auto flex flex-col lg:flex-row lg:gap-x-4 lg:justify-between px-6 lg:px-0 py-8 lg:py-16 lg:pb-56">
 
-        <div class="w-full flex flex-col justify-center mt-4 lg:mt-0 pt-12 lg:pt-36">
+        <div class="w-full flex flex-col justify-center mt-4 lg:mt-0 pt-12 lg:pt-36 object-reveal-125">
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
                     <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl"><?php the_sub_field( 'header' ); ?></h2>
+
+                    <?php if ( get_sub_field( 'subheader_toggle' ) == 1 ) : ?>
+                        <p class="text-white font-sans text-base font-light lg:text-xl 2xl:text-2xl mb-2 lg:mb-4 lg:w-5/6"><?php the_sub_field( 'subheader' ); ?></p>
+                    <?php endif; ?>
 
                     <?php if ( get_sub_field( 'button_toggle' ) == 1 ) : ?>
                         <div class="flex flex-col space-y-3 lg:space-y-5 mt-2 lg:mt-4">

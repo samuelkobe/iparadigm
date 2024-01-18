@@ -15,12 +15,20 @@
 
 		<?php wp_head(); ?>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-		<!-- Swiper JS -->
-    	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" refer></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css"
+		/>
 
-		<script src="https://unpkg.com/vue@3"></script>
-		<!-- <script src="https://unpkg.com/vue@3.2.33/dist/vue.global.prod.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
+
+		<!-- <script src="https://unpkg.com/vue@3"></script> -->
+		<script src="https://unpkg.com/vue@3.2.33/dist/vue.global.prod.js"></script>
+
+		<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+		<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+		<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 	</head>
 	<body <?php body_class(); ?>>

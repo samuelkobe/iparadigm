@@ -48,7 +48,7 @@ if ( have_rows( 'id' ) ) : ?>
 
 <section id="<?php echo $block_id ?>" class="w-full md:mt-16 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
-    <div class="md:container px-6 mx-auto py-16 xl:pt-8">
+    <div class="md:container px-6 mx-auto py-16 xl:py-24 xl:pt-8">
         <div class="w-full lg:px-1/12 xl:px-1/6 flex flex-col md:items-center md:justify-center md:text-center">
             <h2 class="font-title font-bold text-3xl xl:text-5xl 2xl:text-6xl text-brand-black mb-2"><?php the_field( 'team_title' ); ?></h2>
             <p class="font-sans text-base xl:text-lg xl:leading-8 mt-2 xl:mt-6"><?php the_field( 'team_content' ); ?></p>
@@ -58,18 +58,31 @@ if ( have_rows( 'id' ) ) : ?>
 	<?php if ( have_rows( 'team' ) ) : ?>
 		<?php while ( have_rows( 'team' ) ) : the_row(); ?>
 
-        <div class="md:container mx-auto pt-0 pb-12 lg:px-1/12">
-            <div class="flex flex-col md:flex-row items-center md:rounded-xl md:shadow-lg relative pb-6 md:pb-0">
-                <div class="max-w-full w-full min-h-full lg:w-1/2">
-                    <?php $image = get_sub_field( 'image' ); ?>
-                    <?php if ( $image ) : ?>
-                        <img class="min-h-full w-full aspect-square object-cover md:rounded-tl-xl md:rounded-bl-xl" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
-                    <?php endif; ?>
+        <div class="md:container mx-auto pt-0 pb-12 xl:pb-24 lg:px-1/12 object-reveal-250">
+            <div class="flex flex-col border-2 border-brand-dark_grey md:rounded-xl md:shadow-xl relative pb-6 md:pb-0">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="max-w-full w-full min-h-full lg:w-1/2">
+                        <?php $image = get_sub_field( 'image' ); ?>
+                        <?php if ( $image ) : ?>
+                            <img class="min-h-full w-full aspect-square object-cover md:rounded-tl-lg" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="w-full shrink mt-6 md:mt-0 flex flex-col px-6 md:px-0 md:pl-12 h-full">
+                        <h3 class="font-sans text-base xl:text-lg text-brand-fourth_dark mb-1"><?php the_sub_field( 'title' ); ?></h3>
+                        <h2 class="font-title font-bold text-2xl xl:text-[28px] xl:leading-[32px] 2xl:text-[32px] 2xl:leading-[36px] text-brand-black mb-2"><?php the_sub_field( 'name' ); ?></h2>
+                        <p class="pr-4"><?php the_sub_field( 'info' ); ?></p>
+                    </div>
                 </div>
-                <div class="w-full shrink mt-6 md:mt-0 flex flex-col px-6 md:px-0 md:pl-12 h-full">
-                    <h3 class="font-sans text-base xl:text-lg text-brand-fourth mb-1"><?php the_sub_field( 'title' ); ?></h3>
-                    <h2 class="font-title font-bold text-2xl xl:text-[28px] xl:leading-[32px] 2xl:text-[32px] 2xl:leading-[36px] text-brand-black mb-2"><?php the_sub_field( 'name' ); ?></h2>
-                    <p class="pr-4"><?php the_sub_field( 'info' ); ?></p>
+                <div class="flex flex-col px-6 pb-6">
+                    <?php if ( have_rows( 'more_info' ) ) : ?>
+                        <div>
+                            <?php while ( have_rows( 'more_info' ) ) : the_row(); ?>
+                                <p class="pt-8"><?php the_sub_field( 'paragraph' ); ?></p>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php else : ?>
+                        <?php // No rows found ?>
+                    <?php endif; ?>
                     <?php if ( get_sub_field( 'link_toggle' ) == 1 ) : ?>
                         <?php $link = get_sub_field( 'link' ); ?>
                         <?php if ( $link ) : ?>
@@ -85,7 +98,7 @@ if ( have_rows( 'id' ) ) : ?>
 		<?php // No rows found ?>
 	<?php endif; ?>
 
-    <div class="md:container px-6 mx-auto py-2 lg:py-16 lg:pt-32">
+    <div class="md:container px-6 mx-auto py-2 lg:py-16 lg:pt-32 object-reveal-250">
         <div class="w-full lg:px-1/12 xl:px-1/6 flex flex-col md:items-center md:justify-center md:text-center">
 
             <h2 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl text-brand-black mb-2"><?php the_field( 'call_to_action_title' ); ?></h2>

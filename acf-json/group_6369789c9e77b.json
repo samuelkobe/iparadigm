@@ -3,6 +3,23 @@
     "title": "Steps",
     "fields": [
         {
+            "key": "field_63ab5d835d916",
+            "label": "Top Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_636978c551024",
             "label": "Icon",
             "name": "icon",
@@ -68,11 +85,11 @@
             "append": ""
         },
         {
-            "key": "field_636978d051025",
+            "key": "field_63ab5d8f5d917",
             "label": "Steps",
             "name": "",
             "aria-label": "",
-            "type": "message",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -81,9 +98,419 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Steps coming soon.",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63ab4298207fb",
+            "label": "Steps",
+            "name": "steps",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add up to 12 steps per block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 12,
+            "collapsed": "field_63ab4298207fc",
+            "button_label": "Add Step",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63acaacd8be3b",
+                    "label": "Step information",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab4298207fc",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Create the question for the FAQ (Max 128 Characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": 128,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab4298207fd",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Add step content here (Max 512 characters).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab59bd7535d",
+                    "label": "Media Type",
+                    "name": "media_type",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Choose between media types. Animations are added via Lottie, Images can be .webp, .jpg, .png, etc.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Animation",
+                    "ui_off_text": "Image",
+                    "ui": 1,
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab5ac1651c1",
+                    "label": "Step image",
+                    "name": "step_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63ab59bd7535d",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab5c0d651c2",
+                    "label": "Step Animation",
+                    "name": "step_animation",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "Upload your Lottie Animation .json file here. This must be a .json file.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63ab59bd7535d",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ".json",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63af19521ef75",
+                    "label": "Animation frames count",
+                    "name": "animation_frames_count",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "Upload your Lottie Animation .json file here. This must be a .json file.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63ab59bd7535d",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab5ccb58151",
+                    "label": "Header",
+                    "name": "header",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63ab5ce358152",
+                    "label": "Content",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63acaaee8be3c",
+                    "label": "Extra media",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63acab0085072",
+                    "label": "Extra media?",
+                    "name": "extra_media_toggle",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "On",
+                    "ui_off_text": "Off",
+                    "ui": 1,
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63b45a9f95c2f",
+                    "label": "Extra media header",
+                    "name": "extra_media_header",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63acab0085072",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63b44cf48be12",
+                    "label": "Media type?",
+                    "name": "media_type_toggle",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63acab0085072",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "Image",
+                    "ui_off_text": "Video",
+                    "ui": 1,
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63acab1c85073",
+                    "label": "Extra step media image",
+                    "name": "extra_step_media_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63acab0085072",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_63b44cf48be12",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_63ab4298207fb"
+                },
+                {
+                    "key": "field_63b44ce78be10",
+                    "label": "Extra step media video",
+                    "name": "extra_step_media_video",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63acab0085072",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_63b44cf48be12",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_63ab4298207fb"
+                }
+            ]
         }
     ],
     "location": [
@@ -104,5 +531,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667856608
+    "modified": 1687980254
 }

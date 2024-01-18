@@ -58,7 +58,7 @@ if ( have_rows( 'id' ) ) : ?>
 
     <div class="container h-full mx-auto flex flex-col lg:flex-row lg:gap-x-4 lg:justify-between px-6 lg:px-0 py-8 lg:py-16 2xl:pt-40 lg:pb-56">
 
-        <div class="w-full lg:w-1/3 <?php echo $image_order; ?> mb-6 lg:mb-0">
+        <div class="w-full lg:w-1/3 <?php echo $image_order; ?> mb-6 lg:mb-0 object-reveal-125">
             <?php if ( have_rows( 'image_settings' ) ) : ?>
                 <?php while ( have_rows( 'image_settings' ) ) : the_row(); ?>
 
@@ -81,8 +81,8 @@ if ( have_rows( 'id' ) ) : ?>
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
-                    <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[72px] 2xl:text-8xl 2xl:leading-[108px]"><?php the_sub_field( 'header' ); ?></h2>
-                    <p class="text-white text-base lg:text-xl 2xl:text-2xl w-full lg:w-5/6"><?php the_sub_field( 'hero_content' ); ?></p>
+                    <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[72px] 2xl:text-7xl 2xl:leading-[96px] object-reveal-250"><?php the_sub_field( 'header' ); ?></h2>
+                    <p class="text-white text-base lg:text-xl 2xl:text-2xl w-full lg:w-5/6 object-reveal-500"><?php the_sub_field( 'hero_content' ); ?></p>
 
                     <?php if ( get_sub_field( 'button_toggle' ) == 1 ) : ?>
                         <div class="flex flex-col space-y-3 lg:space-y-5 mt-2 lg:mt-4">

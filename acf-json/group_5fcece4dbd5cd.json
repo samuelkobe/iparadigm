@@ -151,8 +151,24 @@
                 },
                 {
                     "key": "field_631280a10205b",
-                    "label": "Footer Link",
+                    "label": "Footer Terms & Services",
                     "name": "footer_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Add a link to a privacy policy, terms & conditions, or other legal document page here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_649ca1e173141",
+                    "label": "Footer Privacy Policy",
+                    "name": "footer_link_two",
                     "aria-label": "",
                     "type": "link",
                     "instructions": "Add a link to a privacy policy, terms & conditions, or other legal document page here.",
@@ -458,5 +474,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667843407
+    "modified": 1687986725
 }

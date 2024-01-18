@@ -52,12 +52,12 @@ if ( have_rows( 'id' ) ) : ?>
 	<?php if ( have_rows( 'advisors' ) ) : ?>
 		<?php while ( have_rows( 'advisors' ) ) : the_row(); ?>
 
-        <div class="container mx-auto pt-0 pb-12 lg:px-1/12">
-            <div class="flex flex-col sm:flex-row items-center sm:rounded-xl sm:shadow-lg relative pb-6 sm:pb-0">
+        <div class="container mx-auto pt-0 pb-12 lg:px-1/12 object-reveal-250">
+            <div class="flex flex-col sm:flex-row items-center border-2 border-brand-dark_grey sm:rounded-xl md:shadow-xl relative pb-6 sm:pb-0">
                 <div class="max-w-full w-full min-h-full lg:w-1/4">
                     <?php $image = get_sub_field( 'image' ); ?>
                     <?php if ( $image ) : ?>
-                        <img class="min-h-full aspect-square object-cover sm:rounded-tl-xl sm:rounded-bl-xl" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
+                        <img class="min-h-full aspect-square object-cover sm:rounded-tl-lg sm:rounded-bl-xl" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
                     <?php endif; ?>
                 </div>
                 <div class="w-full shrink mt-6 sm:mt-0 flex flex-col px-6 sm:px-0 sm:pl-12 h-full">

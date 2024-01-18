@@ -47,6 +47,7 @@ function webokstarter_custom_class_replace( $html ) {
 add_filter('get_custom_logo', 'webokstarter_custom_class_replace', 10);
 
 function cc_mime_types($mimes) {
+ $mimes['json'] = 'application/json';
  $mimes['svg'] = 'image/svg+xml';
  return $mimes;
 }
@@ -56,7 +57,8 @@ add_filter('upload_mimes', 'cc_mime_types');
   Theme Settings - Dynamic Styles required
 \*------------------------------------*/
     // fill-white fill-black - for svg fill
-    // lg:pt-[0px] lg:pt-[16px] lg:pt-[32px] lg:pt-[48px] lg:pt-[64px] lg:pt-[80px] lg:pt-[96px] lg:pt-[112px] lg:t-[128px] lg:pt-[156px] - padding top for blocks
+    // lg:pt-[0px] lg:pt-[16px] lg:pt-[32px] lg:pt-[48px] lg:pt-[64px] lg:pt-[80px] lg:pt-[96px] lg:pt-[112px] lg:pt-[128px] lg:pt-[156px] - padding top for blocks
+		// pt-[0px] pt-[16px] pt-[32px] pt-[48px] pt-[64px] pt-[80px] pt-[96px] pt-[112px] pt-[128px] pt-[156px] - padding top for blocks no large
     // lg:pb-[0px] pb-[16px] pb-[32px] pb-[48px] pb-[64px] pb-[80px] pb-[96px] pb-[112px] pb-[128px] pb-[156px] - padding top for blocks
 	// mb-[0px] mb-[16px] mb-[32px] mb-[48px] mb-[64px] mb-[80px] mb-[96px] mb-[112px] mb-[128px] mb-[156px] - margin bottom for other blocks
     // rounded-none rounded rouned-2xl rounded-full - image rounded for side by side block
@@ -152,6 +154,42 @@ function register_articles_block() {
 			'mode'					=> 'auto',
 			'align'				=> 'wide',
 			'render_template'		=> 'parts/blocks/articles.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_custom_content_block' );
+function register_custom_content_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Custom Content',
+			'title' 				=> __( 'Custom Content' ),
+			'description' 			=> __( 'Custom Content block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'Custom Content', 'Content', 'text' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/custom-content.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_grid_block' );
+function register_grid_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Grid',
+			'title' 				=> __( 'Grid' ),
+			'description' 			=> __( 'Grid block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'Grid', 'Content', 'text' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/grid.php',
 		));
 	}
 }
@@ -289,8 +327,11 @@ function footer_scripts()
 	wp_register_script('scroll-nav', get_template_directory_uri() . '/js/scroll.js', array(), '1.0.0'); // Custom scripts
 	wp_enqueue_script('scroll-nav'); // Enqueue
 
-    wp_register_script('faqs', get_template_directory_uri() . '/js/faqs.js', array(), '1.0.0'); // Custom scripts
-    wp_enqueue_script('faqs'); // Enqueue
+	wp_register_script('scroll-reveal', get_template_directory_uri() . '/js/scroll-reveal.js', array(), '1.0.0'); // Custom scripts
+	wp_enqueue_script('scroll-reveal'); // Enqueue
+
+    wp_register_script('steps', get_template_directory_uri() . '/js/steps.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('steps'); // Enqueue
 }
 
 /* ####### Load styles ####### */

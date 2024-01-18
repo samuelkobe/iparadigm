@@ -2,7 +2,7 @@
 
 	<main role="main">
 
-		<div class="my-28 px-6 lg:container mx-auto lg:my-48 w-full legal-template">
+		<div class="py-12 px-6 lg:container mx-auto lg:px-1/8 lg:py-24 w-full legal-template min-h-[100vh]">
 
 			<?php the_content(); ?>
 
