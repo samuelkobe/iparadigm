@@ -54,8 +54,8 @@ if ( have_rows( 'id' ) ) : ?>
                 
             <div class="flex flex-col xl:flex-row w-full object-reveal-250">
                 <div>
-                    <h1 class="font-title text-3xl lg:text-5xl lg:leading-tight text-brand-black mb-4 lg:mb-6"><?php the_field( 'column_header_1' ); ?></h1>
-                    <span class="font-sans text-base font-light lg:text-xl 2xl:text-2xl text-brand-black mb-2 lg:mb-4 lg:w-5/6"><?php the_field( 'column_content_1', false, false); ?></span>
+                    <h2 class="font-title text-2xl lg:text-3xl 2xl:text-4xl text-brand-black mb-4 lg:mb-8 font-light"><?php echo get_field( 'column_header_1' ); ?></h2>
+                    <span class="font-sans text-base font-thin lg:text-lg 2xl:text-xl text-brand-black mb-2 lg:mb-4 lg:w-5/6"><?php echo get_field( 'column_content_1'); ?></span>
                 </div>
             </div>
 
@@ -63,8 +63,8 @@ if ( have_rows( 'id' ) ) : ?>
 
             <div class="flex flex-col xl:flex-row w-full xl:w-7/12 object-reveal-250">
                 <div>
-                    <h1 class="font-title text-3xl lg:text-5xl lg:leading-tight text-brand-black mb-4 lg:mb-6"><?php the_field( 'column_header_1' ); ?></h1>
-                    <span class="font-sans text-base font-light lg:text-xl 2xl:text-2xl text-brand-black mb-2 lg:mb-4 lg:w-5/6"><?php the_field( 'column_content_1', false, false); ?></span>
+                    <h2 class="font-title text-2xl lg:text-3xl 2xl:text-4xl text-brand-black mb-4 lg:mb-8 font-light"><?php echo get_field( 'column_header_1' ); ?></h2>
+                    <span class="font-sans text-base font-thin lg:text-lg 2xl:text-xl text-brand-black mb-2 lg:mb-4 lg:w-5/6"><?php echo get_field( 'column_content_1'); ?></span>
                 </div>
             </div>
 

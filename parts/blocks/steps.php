@@ -45,7 +45,7 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="flex flex-row items-center justify-start bg-transparent relative mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="flex flex-row items-center justify-start bg-transparent relative sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
     <div class="container mx-auto px-6 lg:px-4 w-full bg-white flex flex-col items-center my-12 lg:mt-28 lg:mb-20">
 
@@ -60,28 +60,37 @@ if ( have_rows( 'id' ) ) : ?>
         </div>
 
         <?php
+			if ( get_field( 'steps_format' ) == 1 ) :
+                $steps_flex = 'flex-col lg:flex-row';
+                $steps_image_width = 'lg:w-5/12';
+                $steps_content_width = 'lg:w-1/2';
+            else :
+                $steps_flex = 'flex-col-reverse lg:flex-col-reverse';
+                $steps_image_width = 'lg:w-full lg:px-[10vw]';
+                $steps_content_width = 'lg:w-full';
+            endif;
+
             $step_count = 0;
             if ( have_rows( 'steps' ) ) : ?>
             <div class="flex flex-col space-y-4 lg:space-y-6 w-full md:w-5/6 md:mx-1/12 2xl:w-2/3 2xl:mx-1/12 object-reveal-250">
                 <?php while ( have_rows( 'steps' ) ) : the_row(); ?>             
                     <div class="border-t-2 border-brand-dark_grey step-item flex flex-col justify-center w-full relative p-4 pt-8 lg:pt-12 mt-8 lg:mt-12 rounded-md after:w-full after:absolute after:inset-0 after:bg-white after:opacity-[8%] after:rounded-md open">
                     <!-- <div class="border-t-2 border-brand-dark_grey step-item flex flex-col justify-center w-full relative p-4 pt-8 lg:pt-12 mt-8 lg:mt-12 rounded-md after:w-full after:absolute after:inset-0 after:bg-white after:opacity-[8%] after:rounded-md <//php if ($step_count == 0) : echo 'open'; else : endif; ?>"> -->
-                        <div class="relative w-full h-20 step-header cursor-pointer z-10 open">
+                        <div class="relative w-full h-8 lg:h-20 step-header cursor-pointer z-10 open">
                         <!-- <div class="relative w-full h-20 step-header cursor-pointer z-10 <?//php if ($step_count == 0) : echo 'open'; else : endif; ?>"> -->
-                            <h3 class="font-title text-xs lg:text-sm 2xl:text-base leading-6 lg:leading-8 flex items-center align-middle uppercase text-brand-third">
-                                <div class="inline-flex items-center justify-center relative text-center align-middle w-6 h-6 lg:w-8 lg:h-8 leading-6 lg:leading-8 rounded-full bg-brand-third text-brand-black text-xs lg:text-sm mr-2">
+                            <h2 class="font-title text-xl lg:text-2xl 2xl:text-4xl leading-6 lg:leading-8 flex items-center align-middle text-brand-black">
+                                <div class="inline-flex items-center justify-center relative text-center align-middle w-6 h-6 lg:w-8 lg:h-8 leading-6 lg:leading-8 rounded-full bg-brand-alt text-brand-black text-base lg:text-xl mr-2">
                                     <?php echo $step_count + 1; ?>
                                     <span class="absolute inset-0 border-2 border-brand-black rounded-full z-0"></span>
                                 </div>
-                                <?php the_sub_field( 'subtitle' ); ?>
-                            </h3>
-                            <h2 class="font-title font-medium text-xl lg:text-2xl 2xl:text-3xl ml-2 mt-2 lg:ml-4 lg:mt-4"><?php the_sub_field( 'title' ); ?></h2>
+                                <?php echo get_sub_field( 'subtitle' ); ?>
+                            </h2>
                             <div class="step-tag bg-contain bg-no-repeat bg-center absolute top-0 right-0 w-4 lg:w-6 h-4 lg:h-6 transform duration-200"></div>
                         </div>
                         <div class="step-inner-container z-10">
 
-                            <div class="w-full flex flex-col lg:flex-row">
-                                <div class="w-full lg:w-5/12 pb-8 lg:pb-0">
+                            <div class="w-full flex <?php echo $steps_flex;?>">
+                                <div class="w-full <?php echo $steps_image_width;?> pb-8 lg:pb-0 pt-4">
                                     <?php if ( get_sub_field( 'media_type' ) == 1 ) : ?>
 
                                         <?php if ( get_sub_field( 'step_animation' ) ) : ?>
@@ -120,11 +129,13 @@ if ( have_rows( 'id' ) ) : ?>
                                     <?php endif; ?>
                                 </div>
 
-                                <div class="w-0 lg:w-1/12"></div>
+                                <?php if ( get_field( 'steps_format' ) == 1 ) :?>
+                                    <div class="w-0 lg:w-1/12"></div>
+                                <?php endif;?>
 
-                                <div class="w-full lg:w-1/2">
-                                    <h4 class="w-full font-title font-bold text-base lg:text-lg mb-6"><?php the_sub_field( 'header' ); ?></h4>
-                                    <p class="w-full text-xs lg:text-sm"><?php the_sub_field( 'content' ); ?></p>
+                                <div class="w-full <?php echo $steps_content_width;?>">
+                                    <h3 class="w-full font-title font-bold text-base lg:text-lg mb-2"><?php echo get_sub_field( 'header' ); ?></h3>
+                                    <p class="w-full text-xs lg:text-sm"><?php echo get_sub_field( 'content' ); ?></p>
                                 </div>
                             </div>
 
@@ -132,7 +143,7 @@ if ( have_rows( 'id' ) ) : ?>
                                 <div class="w-full h-auto py-6 lg:p-6 relative flex flex-col">
 
                                     <?php if (get_sub_field( 'extra_media_header') != null ) : ?>
-                                        <h4 class="self-end w-fit font-title font-light border-t-[#212121] border-t-[1px] text-[#212121] text-base lg:text-lg mt-6 lg:mt-12"><?php the_sub_field( 'extra_media_header' ); ?></h4>
+                                        <h4 class="self-end w-fit font-title font-light border-t-[#212121] border-t-[1px] text-[#212121] text-base lg:text-lg mt-6 lg:mt-12"><?php echo get_sub_field( 'extra_media_header' ); ?></h4>
                                     <?php endif; ?>
 
                                     <?php if ( get_sub_field( 'media_type_toggle' ) == 1 ) : ?>

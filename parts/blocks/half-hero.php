@@ -53,10 +53,10 @@ if ( have_rows( 'id' ) ) : ?>
             <?php if ( have_rows( 'content' ) ) : ?>
                 <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
-                    <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl"><?php the_sub_field( 'header' ); ?></h2>
+                    <h2 class="text-white mb-3 font-title font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl"><?php echo get_sub_field( 'header' ); ?></h2>
 
                     <?php if ( get_sub_field( 'subheader_toggle' ) == 1 ) : ?>
-                        <p class="text-white font-sans text-base font-light lg:text-xl 2xl:text-2xl mb-2 lg:mb-4 lg:w-5/6"><?php the_sub_field( 'subheader' ); ?></p>
+                        <p class="text-white font-sans text-base font-light lg:text-xl 2xl:text-2xl mb-2 lg:mb-4 lg:w-5/6"><?php echo get_sub_field( 'subheader' ); ?></p>
                     <?php endif; ?>
 
                     <?php if ( get_sub_field( 'button_toggle' ) == 1 ) : ?>

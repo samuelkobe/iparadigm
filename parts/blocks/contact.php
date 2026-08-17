@@ -59,21 +59,22 @@ if ( have_rows( 'id' ) ) : ?>
                     <?php endif; ?>
                 </div>
 
-                <p class="font-sans text-lg lg:text-3xl"><?php the_field( 'name' ); ?></p>
-                <p class="font-mono text-base lg:text-xl"><?php the_field( 'title' ); ?></p>
+                <p class="font-sans text-lg lg:text-3xl"><?php echo get_field( 'name' ); ?></p>
+                <p class="font-sans text-base lg:text-lg"><?php echo get_field( 'title' ); ?></p>
             </div>
 
             <div class="w-full lg:w-2/3 flex flex-col">
                 
                 <div class="w-full flex items-center">
                     <div class="w-full flex flex-col items-center justify-center lg:justify-start lg:flex-row object-reveal-250">                        
-                        <h3 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl px-6 lg:px-0 text-brand-black mb-2 lg:pl-6"><?php the_field( 'form_content' ); ?></h3>
+                        <h3 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl px-6 lg:px-0 text-brand-black mb-2 lg:pl-6"><?php echo get_field( 'form_content' ); ?></h3>
                     </div>
                 </div>
 
                 <div class="w-full px-6 object-reveal-375">
-                    <?php the_field( 'contact_form_embed' ); ?>
+                    <?php echo get_field( 'contact_form_embed' ); ?>
                 </div>
+                
             </div>
             
         </div>

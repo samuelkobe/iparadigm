@@ -45,7 +45,7 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="w-full mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="w-full sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
     <div class="bg-white relative flex flex-col items-center justify-center pt-16 pb-8 2xl:py-32">
 
         <div class="container pb-8 xl:pb-0 h-auto xl:min-h-[480px] xl:h-auto flex flex-col xl:flex-row px-6 xl:px-4 xl:space-x-24 xl:items-center">
@@ -56,7 +56,7 @@ if ( have_rows( 'id' ) ) : ?>
                   <?php while ( have_rows( 'item' ) ) : the_row(); ?>
                     <?php if ( get_sub_field( 'text_or_image' ) == 1 ) : ?>
                       <div class="from-brand-black to-brand-third_dark bg-gradient-to-tl text-white w-full aspect-square object-contain flex items-center justify-center">
-                        <h3 class="text-xl md:text-2xl 2xl:text-3xl font-sans"><?php the_sub_field( 'name' ); ?></h3>
+                        <h3 class="text-xl md:text-2xl 2xl:text-3xl font-sans"><?php echo get_sub_field( 'name' ); ?></h3>
                       </div>
                       <?php else : ?>
                       <div class="bg-red-300 w-full">

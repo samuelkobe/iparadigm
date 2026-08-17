@@ -45,7 +45,7 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="w-full mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="w-full sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
     <div class="bg-white relative flex flex-col items-center pt-16 pb-8 2xl:py-24">
 
         <div class="container min-h-[480px] h-auto md:h-[40vh] lg:min-h-[640px] lg:h-[55vh] flex flex-col md:flex-row md:items-center object-reveal-250">
@@ -58,11 +58,11 @@ if ( have_rows( 'id' ) ) : ?>
                 </div>
                 
                 <div>
-                    <h2 class="font-title text-2xl xl:text-[28px] xl:leading-[32px] 2xl:text-[32px] 2xl:leading-[36px] text-brand-black mb-2 lg:mb-4"><?php the_field( 'articles_section_header' ); ?></h2>
+                    <h2 class="font-title text-2xl xl:text-[28px] xl:leading-[32px] 2xl:text-[32px] 2xl:leading-[36px] text-brand-black mb-2 lg:mb-4"><?php echo get_field( 'articles_section_header' ); ?></h2>
 
                     <?php $link = get_field( 'link' ); ?>
                     <?php if ( $link ) : ?>
-                        <a class="underline text-brand-third font-bold font-button text-base lg:text-xl" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+                        <a class="underline text-brand-third font-bold font-sans text-base lg:text-xl" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
                     <?php endif; ?>
                 </div>
             </div>
@@ -106,7 +106,7 @@ if ( have_rows( 'id' ) ) : ?>
                                             <?php $article_url_target = ''; ?>
                                         <?php endif; ?>
 
-                                        <a class="font-button text-brand-third underline capitalize" href="<?php echo $article_url; ?>" target="<?php echo $article_url_target; ?>">read more</a>    
+                                        <a class="font-sans text-brand-third underline capitalize" href="<?php echo $article_url; ?>" target="<?php echo $article_url_target; ?>">read more</a>    
     
                                     </div>
                                 </div>

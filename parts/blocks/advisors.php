@@ -46,7 +46,7 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="w-full sm:mt-16 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="w-full sm:mt-16 sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
 
 	<?php if ( have_rows( 'advisors' ) ) : ?>
@@ -66,7 +66,7 @@ if ( have_rows( 'id' ) ) : ?>
                     <?php if ( get_sub_field( 'link_toggle' ) == 1 ) : ?>
                         <?php $link = get_sub_field( 'link' ); ?>
                         <?php if ( $link ) : ?>
-                            <a class="font-button text-brand-third underline capitalize mt-2" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+                            <a class="font-sans text-brand-third underline capitalize mt-2" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>

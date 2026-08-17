@@ -3,7 +3,7 @@
     "title": "Custom Content",
     "fields": [
         {
-            "key": "field_64ad96bf0ef71",
+            "key": "field_64ad95f7f9491",
             "label": "Top Spacing",
             "name": "top_spacing",
             "aria-label": "",
@@ -36,7 +36,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_64ad96be0ef70",
+            "key": "field_64ad95d9b2166",
             "label": "Bottom Spacing",
             "name": "bottom_spacing",
             "aria-label": "",
@@ -130,7 +130,7 @@
             "label": "Content",
             "name": "column_content_1",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "Add content for the column here (Max 1500 characters).",
             "required": 0,
             "conditional_logic": 0,
@@ -140,10 +140,10 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
         },
         {
             "key": "field_6451927bb0675",
@@ -214,5 +214,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689097942
+    "modified": 1705615602
 }

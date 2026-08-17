@@ -284,39 +284,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_64ad91c70f91c",
-            "label": "Top Spacing (copy)",
-            "name": "top_spacing_copy",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "Choose how much space should be above this block (Default is 0);",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "[0px]": "none (0px)",
-                "[16px]": "xs (16px)",
-                "[32px]": "sm (32px)",
-                "[48px]": "md (48px)",
-                "[64px]": "lg (64px)",
-                "[80px]": "xl (80px)",
-                "[96px]": "2xl (96px)",
-                "[112px]": "3xl (112px)",
-                "[128px]": "4xl (128px)",
-                "[156px]": "5xl (156px)"
-            },
-            "default_value": "0px",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_63698a8d60a2c",
             "label": "Bottom Spacing",
             "name": "bottom_spacing",
@@ -368,5 +335,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689096651
+    "modified": 1705628902
 }

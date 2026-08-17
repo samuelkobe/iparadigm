@@ -45,15 +45,15 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="min-h-[320px] lg:min-h-[640px] lg:h-[50vh] flex flex-row items-center justify-start bg-transparent relative mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="min-h-[320px] lg:min-h-[640px] lg:h-[50vh] flex flex-row items-center justify-start bg-transparent relative sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
-    <div class="w-full h-full bg-gradient-to-b lg:bg-gradient-to-tr from-brand-third to-[#1C5D86] angled pt-20 lg:pt-12 pb-12 object-reveal-125">
+    <div class="w-full h-full bg-gradient-to-b lg:bg-gradient-to-r from-brand-dark_gradient to-brand-third angled pt-20 lg:pt-12 pb-12 object-reveal-125">
 
         <div class="container px-6 lg:px-4 mx-auto h-full flex flex-col lg:flex-row lg:items-center">
 
             <div class="flex flex-col object-reveal-250 pt-16 xl:pt-8">
-                <h1 class="font-title text-3xl lg:text-4xl lg:leading-tight text-white mb-4 lg:mb-6"><?php the_field( 'header' ); ?></h2>
-                <p class="font-sans text-base font-light lg:text-lg 2xl:text-xl text-white mb-2 lg:mb-4"><?php the_field('content', false, false); ?></p>
+                <h2 class="font-title text-2xl lg:text-3xl 2xl:text-4xl text-white mb-4 lg:mb-8 font-light"><?php echo get_field( 'header' ); ?></h2>
+                <p class="font-sans text-base font-light lg:text-lg 2xl:text-xl text-white mb-2 lg:mb-4"><?php echo get_field('content'); ?></p>
                 <?php $button_link = get_field( 'button' ); ?>            
                 <?php if ( $button_link ) : ?>
                     <div class="flex w-full mt-2">

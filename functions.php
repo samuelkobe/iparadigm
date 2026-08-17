@@ -60,7 +60,8 @@ add_filter('upload_mimes', 'cc_mime_types');
     // lg:pt-[0px] lg:pt-[16px] lg:pt-[32px] lg:pt-[48px] lg:pt-[64px] lg:pt-[80px] lg:pt-[96px] lg:pt-[112px] lg:pt-[128px] lg:pt-[156px] - padding top for blocks
 		// pt-[0px] pt-[16px] pt-[32px] pt-[48px] pt-[64px] pt-[80px] pt-[96px] pt-[112px] pt-[128px] pt-[156px] - padding top for blocks no large
     // lg:pb-[0px] pb-[16px] pb-[32px] pb-[48px] pb-[64px] pb-[80px] pb-[96px] pb-[112px] pb-[128px] pb-[156px] - padding top for blocks
-	// mb-[0px] mb-[16px] mb-[32px] mb-[48px] mb-[64px] mb-[80px] mb-[96px] mb-[112px] mb-[128px] mb-[156px] - margin bottom for other blocks
+		// mb-[0px] mb-[16px] mb-[32px] mb-[48px] mb-[64px] mb-[80px] mb-[96px] mb-[112px] mb-[128px] mb-[156px] - margin bottom for other blocks
+		// lg:mb-[0px] lg:mb-[16px] lg:mb-[32px] lg:mb-[48px] lg:mb-[64px] lg:mb-[80px] lg:mb-[96px] lg:mb-[112px] lg:mb-[128px] lg:mb-[156px] - margin bottom for other blocks
     // rounded-none rounded rouned-2xl rounded-full - image rounded for side by side block
 	
 	// various editor styles required
@@ -100,6 +101,24 @@ function register_cta_block() {
 			'mode'					=> 'auto',
 			'align'				=> 'wide',
 			'render_template'		=> 'parts/blocks/cta.php',
+		));
+	}
+}
+
+add_action( 'acf/init', 'register_container_block' );
+function register_container_block() {
+	if ( function_exists( 'acf_register_block_type' ) ) {
+		acf_register_block_type( array(
+			'name' 					=> 'Container Block',
+			'title' 				=> __( 'Container block' ),
+			'description' 			=> __( 'Container block.' ),
+			'category' 				=> 'formatting',
+			'icon'					=> 'layout',
+			'keywords'				=> array( 'container width block' ),
+			'post_types'			=> array( 'post', 'page' ),
+			'mode'					=> 'auto',
+			'align'				=> 'wide',
+			'render_template'		=> 'parts/blocks/container-block.php',
 		));
 	}
 }
@@ -625,5 +644,55 @@ add_action( 'wp_before_admin_bar_render', 'webokstarter_admin_bar_render' );
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
+
+// ACF DEBUGGING
+add_action( 'acf/will_remove_unsafe_html', 'acf_enable_detailed_escape_logging_to_php_error_log', 10, 4 );
+add_action( 'acf/removed_unsafe_html', 'acf_enable_detailed_escape_logging_to_php_error_log', 10, 4 );
+function acf_enable_detailed_escape_logging_to_php_error_log( $function, $selector, $field_object, $post_id ) {
+	if ( $function === 'the_sub_field' ) {
+		$field = get_sub_field_object( $selector, true );
+		$value = ( is_array( $field ) && isset( $field['value'] ) ) ? $field['value'] : false;
+	} else {
+		$value = get_field( $selector, $post_id );
+	}
+	if ( is_array( $value ) ) {
+		$value = implode( ', ', $value );
+	}
+
+	$field_type              = is_array( $field_object ) && isset( $field_object['type'] ) ? $field_object['type'] : 'text';
+	$field_type_escapes_html = acf_field_type_supports( $field_type, 'escaping_html' );
+
+	if ( $field_type_escapes_html ) {
+		if ( $function === 'the_sub_field' ) {
+			$field     = get_sub_field_object( $selector, true, true, true );
+			$new_value = ( is_array( $field ) && isset( $field['value'] ) ) ? $field['value'] : false;
+		} else {
+			$new_value = get_field( $selector, $post_id, true, true );
+		}
+		if ( is_array( $new_value ) ) {
+			$new_value = implode( ', ', $new_value );
+		}
+	} else {
+		$new_value = acf_esc_html( $value );
+	}
+
+	if ( empty( $post_id ) ) {
+		$post_id = acf_get_valid_post_id( $post_id );
+	}
+
+	if ( $function === 'acf_shortcode' ) {
+		$template = get_page_template() . ' (likely not relevant for shortcode)';
+	} else {
+		$template = get_page_template();
+	}
+
+	error_log(
+		'***ACF HTML Escaping Debug***' . PHP_EOL .
+		'HTML modification detected the value of ' . $selector . ' on post ID ' . $post_id . ' via ' . $function . PHP_EOL .
+		'Raw Value: ' . var_export( $value, true ) . PHP_EOL .
+		'Escaped Value: ' . var_export( $new_value, true ) . PHP_EOL .
+		'Template: ' . $template
+	);
+}
 
 ?>

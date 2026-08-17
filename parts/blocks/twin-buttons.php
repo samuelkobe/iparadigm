@@ -45,16 +45,16 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="flex flex-row items-center justify-start bg-transparent relative mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="flex flex-row items-center justify-start bg-transparent relative sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
     <div class="w-full flex flex-col md:flex-row my-12 lg:my-20">
 
         <div class="w-full md:w-1/2 flex flex-col items-center justify-center bg-brand-third text-white py-16 lg:py-24 2xl:py-36 px-12 lg:pl-1/12 lg:pr-1/24">
             <div class="w-full lg:w-auto flex flex-col items-start">
                 <i class="fa-solid fa-magnifying-glass text-3xl lg:text-4xl 2xl:text-6xl mb-4 lg:mb-8"></i>
-                <h3 class="text-4xl lg:text-5xl 2xl:text-7xl w-full 2xl:leading-none font-title font-semibold theme-override"><?php the_field( 'title' ); ?></h3>
+                <h3 class="text-4xl lg:text-5xl 2xl:text-7xl w-full 2xl:leading-none font-title font-semibold theme-override"><?php echo get_field( 'title' ); ?></h3>
                 <?php if ( get_field( 'content_toggle' ) == 1 ) : ?>
-                        <p class="text-base texlg:text-lg 2xl:text-xl w-full lg:w-[420px] xl:w-[480px] max-w-full mb-2"><?php the_field( 'content' ); ?></p>
+                        <p class="text-base texlg:text-lg 2xl:text-xl w-full lg:w-[420px] xl:w-[480px] max-w-full mb-2"><?php echo get_field( 'content' ); ?></p>
                 <?php endif; ?>
                 <?php $button = get_field( 'button' ); ?>            
                 <?php if ( $button ) : ?>
@@ -69,9 +69,9 @@ if ( have_rows( 'id' ) ) : ?>
 
             <div class="w-full lg:w-auto flex flex-col items-start">
                 <i class="fa-regular fa-comment text-3xl lg:text-4xl 2xl:text-6xl mb-4 lg:mb-8"></i>
-                <h3 class="text-4xl lg:text-5xl 2xl:text-7xl w-full 2xl:leading-none font-title font-semibold theme-override"><?php the_field( 'title_two' ); ?></h3>
+                <h3 class="text-4xl lg:text-5xl 2xl:text-7xl w-full 2xl:leading-none font-title font-semibold theme-override"><?php echo get_field( 'title_two' ); ?></h3>
                 <?php if ( get_field( 'content_toggle_two' ) == 1 ) : ?>
-                    <p class="text-base texlg:text-lg 2xl:text-xl w-full lg:w-[420px] xl:w-[480px] max-w-full mb-2"><?php the_field( 'content_two' ); ?></p>
+                    <p class="text-base texlg:text-lg 2xl:text-xl w-full lg:w-[420px] xl:w-[480px] max-w-full mb-2"><?php echo get_field( 'content_two' ); ?></p>
                 <?php endif; ?>
                 <?php $button_two = get_field( 'button_two' ); ?>            
                 <?php if ( $button_two ) : ?>

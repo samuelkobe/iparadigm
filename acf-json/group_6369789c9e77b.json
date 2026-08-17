@@ -85,6 +85,26 @@
             "append": ""
         },
         {
+            "key": "field_65a9cedd3f481",
+            "label": "Steps Format",
+            "name": "steps_format",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Choose if the steps content should be side by side with the Landscape format, or on top of each other with the Portrait format.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Landscape",
+            "ui_off_text": "Portrait",
+            "ui": 1
+        },
+        {
             "key": "field_63ab5d8f5d917",
             "label": "Steps",
             "name": "",
@@ -142,29 +162,8 @@
                     "parent_repeater": "field_63ab4298207fb"
                 },
                 {
-                    "key": "field_63ab4298207fc",
-                    "label": "Title",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "Create the question for the FAQ (Max 128 Characters).",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": 128,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_63ab4298207fb"
-                },
-                {
                     "key": "field_63ab4298207fd",
-                    "label": "Subtitle",
+                    "label": "Title",
                     "name": "subtitle",
                     "aria-label": "",
                     "type": "text",
@@ -305,7 +304,7 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -531,5 +530,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687980254
+    "modified": 1705627975
 }

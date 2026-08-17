@@ -1,6 +1,6 @@
-.wpcf7-form input.wpcf7-text, .wpcf7-form textarea.wpcf7-textarea {
-  @apply
-  w-full
+.wpcf7-form input.wpcf7-text,
+.wpcf7-form textarea.wpcf7-textarea {
+  @apply w-full
   text-brand-black
   bg-gray-100
   border-2
@@ -21,27 +21,49 @@
   @apply w-full h-24 lg:h-48;
 }
 
-.wpcf7-form .wpcf7-radio, .wpcf7-form .wpcf7-checkbox {
+.wpcf7-form .wpcf7-radio,
+.wpcf7-form .wpcf7-checkbox {
   @apply flex flex-col w-full;
 }
 
-.wpcf7-form .wpcf7-radio .wpcf7-list-item.first, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last, .wpcf7-form .wpcf7-radio .wpcf7-list-item, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.last,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
   @apply flex flex-row items-center;
 }
-.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last label, .wpcf7-form .wpcf7-radio .wpcf7-list-item label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.last label,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item label,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item label {
   @apply flex flex-row items-center;
 }
-.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label input, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last label input, .wpcf7-form .wpcf7-radio .wpcf7-list-item label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label input, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label input {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label input,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.last label input,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item label input,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label input,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label input,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item label input {
   @apply w-4 h-4 mr-2;
 }
-.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label span, .wpcf7-form .wpcf7-radio .wpcf7-list-item.last label span, .wpcf7-form .wpcf7-radio .wpcf7-list-item label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label span, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item label span {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.first label span,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item.last label span,
+.wpcf7-form .wpcf7-radio .wpcf7-list-item label span,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.first label span,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item.last label span,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item label span {
   @apply text-lg lg:text-xl text-brand-black;
 }
-.wpcf7-form .wpcf7-radio .wpcf7-list-item, .wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
+.wpcf7-form .wpcf7-radio .wpcf7-list-item,
+.wpcf7-form .wpcf7-checkbox .wpcf7-list-item {
   @apply ml-0;
 }
 .wpcf7-form input.wpcf7-submit {
-  @apply bg-brand-third border-none ring-0 text-center py-2 lg:py-3 lg:px-6 font-bold tracking-wider lg:text-lg w-fit justify-center mt-2 pt-2 pb-1 xl:pt-2 px-3 xl:pb-1 xl:px-4 rounded no-underline shadow-xl inline-flex text-white font-button text-xl 2xl:text-2xl transition-colors duration-300 uppercase cursor-pointer;
+  @apply bg-brand-third border-none ring-0 text-center py-2 lg:py-3 lg:px-6 font-bold tracking-wider lg:text-lg w-fit justify-center mt-2 pt-2 pb-1 xl:pt-2 px-3 xl:pb-1 xl:px-4 rounded no-underline shadow-xl inline-flex text-white font-sans text-xl 2xl:text-xl transition-colors duration-300 uppercase cursor-pointer;
 }
 .wpcf7-form input.wpcf7-submit:hover {
   @apply bg-brand-light_gradient;
@@ -82,10 +104,14 @@
 .wpcf7-form div.wordpress-content.wrapper-content > div.wordpress-content {
   @apply mt-4 lg:mt-0;
 }
-.wpcf7-form div.wordpress-content.wrapper-content > div.wordpress-content:first-child {
+.wpcf7-form
+  div.wordpress-content.wrapper-content
+  > div.wordpress-content:first-child {
   @apply mt-0;
 }
-.wpcf7-form *[dir=rtl] .wpcf7-select, .wpcf7-form :root:lang(ar) .wpcf7-select, .wpcf7-form :root:lang(iw) .wpcf7-select {
+.wpcf7-form *[dir="rtl"] .wpcf7-select,
+.wpcf7-form :root:lang(ar) .wpcf7-select,
+.wpcf7-form :root:lang(iw) .wpcf7-select {
   background-position: left 0.7em top 50%, 0 0;
   padding: 0.6em 0.8em 0.5em 1.4em;
 }

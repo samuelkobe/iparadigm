@@ -45,11 +45,11 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="w-full mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="w-full sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
     <div class="bg-white relative flex flex-col items-center py-28 2xl:py-32">
         
         <div class="max-w-full w-[320px] md:w-[480px] lg:w-[640px] mx-auto mb-6 lg:mb-12">
-            <h3 class="font-sans text-black text-3xl lg:text-5xl text-center w-full"><?php the_field( 'testimonials_group_title' ); ?></h3>
+            <h3 class="font-sans text-black text-3xl lg:text-5xl text-center w-full"><?php echo get_field( 'testimonials_group_title' ); ?></h3>
         </div>
 
         <div class="w-full swiperTestimonials testimonials-wrapper-div">
@@ -74,11 +74,11 @@ if ( have_rows( 'id' ) ) : ?>
                                 <?php endif; ?>
                                 
                                 <div class="mt-2 md:mt-0 md:ml-4 w-auto flex flex-col">
-                                    <h4 class="text-black font-title font-semibold text-lg lg:text-xl"><?php the_sub_field( 'author' ); ?></h4>
-                                    <h5 class=" text-brand-dark_grey font-sans font-normal text-sm lg:text-base"><?php the_sub_field( 'title' ); ?></h5>
+                                    <h4 class="text-black font-title font-semibold text-lg lg:text-xl"><?php echo get_sub_field( 'author' ); ?></h4>
+                                    <h5 class=" text-brand-dark_grey font-sans font-normal text-sm lg:text-base"><?php echo get_sub_field( 'title' ); ?></h5>
                                 </div>
                             </div>
-                            <p class="mt-5 text-black font-base font-normal text-base lg:text-lg w-full lg:w-11/12"><?php the_sub_field( 'quote' ); ?></p>
+                            <p class="mt-5 text-black font-base font-normal text-base lg:text-lg w-full lg:w-11/12"><?php echo get_sub_field( 'quote' ); ?></p>
                         </div>
                     <?php endwhile; ?>
                 </div>

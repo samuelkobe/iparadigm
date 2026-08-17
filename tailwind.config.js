@@ -31,7 +31,7 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
         title: ["Roboto", "san-serif"],
-        button: ["Roboto Mono", "san-serif"],
+        button: ["Open Sans", "san-serif"],
       },
       minWidth: {
         "1/2": "50%",

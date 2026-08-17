@@ -46,12 +46,12 @@ if ( have_rows( 'id' ) ) : ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="<?php echo $block_id ?>" class="w-full md:mt-16 mb-<?php echo get_field( 'bottom_spacing' ); ?>">
+<section id="<?php echo $block_id ?>" class="w-full md:mt-16 sm:mb-8 lg:mb-<?php echo get_field( 'bottom_spacing' ); ?>">
 
     <div class="md:container px-6 mx-auto py-16 xl:py-24 xl:pt-8">
         <div class="w-full lg:px-1/12 xl:px-1/6 flex flex-col md:items-center md:justify-center md:text-center">
-            <h2 class="font-title font-bold text-3xl xl:text-5xl 2xl:text-6xl text-brand-black mb-2"><?php the_field( 'team_title' ); ?></h2>
-            <p class="font-sans text-base xl:text-lg xl:leading-8 mt-2 xl:mt-6"><?php the_field( 'team_content' ); ?></p>
+            <h2 class="font-title font-bold text-3xl xl:text-5xl 2xl:text-6xl text-brand-black mb-2"><?php echo get_field( 'team_title' ); ?></h2>
+            <p class="font-sans text-base xl:text-lg xl:leading-8 mt-2 xl:mt-6"><?php echo get_field( 'team_content' ); ?></p>
         </div>
     </div>
 
@@ -68,16 +68,16 @@ if ( have_rows( 'id' ) ) : ?>
                         <?php endif; ?>
                     </div>
                     <div class="w-full shrink mt-6 md:mt-0 flex flex-col px-6 md:px-0 md:pl-12 h-full">
-                        <h3 class="font-sans text-base xl:text-lg text-brand-fourth_dark mb-1"><?php the_sub_field( 'title' ); ?></h3>
-                        <h2 class="font-title font-bold text-2xl xl:text-[28px] xl:leading-[32px] 2xl:text-[32px] 2xl:leading-[36px] text-brand-black mb-2"><?php the_sub_field( 'name' ); ?></h2>
-                        <p class="pr-4"><?php the_sub_field( 'info' ); ?></p>
+                        <h3 class="font-sans text-base xl:text-lg text-brand-fourth_dark mb-1"><?php echo get_sub_field( 'title' ); ?></h3>
+                        <h2 class="font-title font-bold text-2xl xl:text-[28px] xl:leading-[32px] 2xl:text-[32px] 2xl:leading-[36px] text-brand-black mb-2"><?php echo get_sub_field( 'name' ); ?></h2>
+                        <p class="pr-4"><?php echo get_sub_field( 'info' ); ?></p>
                     </div>
                 </div>
                 <div class="flex flex-col px-6 pb-6">
                     <?php if ( have_rows( 'more_info' ) ) : ?>
                         <div>
                             <?php while ( have_rows( 'more_info' ) ) : the_row(); ?>
-                                <p class="pt-8"><?php the_sub_field( 'paragraph' ); ?></p>
+                                <p class="pt-8"><?php echo get_sub_field( 'paragraph' ); ?></p>
                             <?php endwhile; ?>
                         </div>
                     <?php else : ?>
@@ -86,7 +86,7 @@ if ( have_rows( 'id' ) ) : ?>
                     <?php if ( get_sub_field( 'link_toggle' ) == 1 ) : ?>
                         <?php $link = get_sub_field( 'link' ); ?>
                         <?php if ( $link ) : ?>
-                            <a class="font-button text-brand-third underline capitalize mt-2" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+                            <a class="font-sans text-brand-third underline capitalize mt-2" href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
@@ -101,7 +101,7 @@ if ( have_rows( 'id' ) ) : ?>
     <div class="md:container px-6 mx-auto py-2 lg:py-16 lg:pt-32 object-reveal-250">
         <div class="w-full lg:px-1/12 xl:px-1/6 flex flex-col md:items-center md:justify-center md:text-center">
 
-            <h2 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl text-brand-black mb-2"><?php the_field( 'call_to_action_title' ); ?></h2>
+            <h2 class="font-title font-bold text-xl xl:text-3xl 2xl:text-4xl text-brand-black mb-2"><?php echo get_field( 'call_to_action_title' ); ?></h2>
 
             <div class="flex items-center lg:justify-center w-full mt-2 lg:mt-8">
                 <?php $call_to_action_link = get_field( 'call_to_action_link' ); ?>            
